@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    // named function
+    <!-- <script>
+        function add(a,b){
+            return a+b;
+        }
+        console.log(add(10,20))
+    </script> -->
+
+    // anonymus function
+    <!-- <script>
+        let add=function(a,b){
+            return a+b;
+
+        }
+        console.log(add(10,20))
+    </script> -->
+
+    // arrow function (=>)
+    <!-- <script>
+       // let res=(a,b)=>{
+       //     return a+b
+       // }
+       // console.log(res(10,30))
+
+        let res=a=>a*a
+        
+        console.log(res(10))
+    </script> -->
+
+
+    <!-- // Higher Order which returns another function
+    <script>
+        function abc(){
+            let a=10
+            console.log(a)
+            return welcome()
+        }
+
+        function welcome(){
+            return"welcome"
+        }
+        console.log(abc())
+
+    </script> -->
+
+    // Higher Order which accepts another function as a argument
+    <!-- <script>
+        function abc(a){
+        
+            console.log(a())
+            
+        }
+        abc(welcome)
+
+        function welcome(){
+            return"welcome"
+        } -->
+       
+
+    <!-- </script> -->
+
+    // Nested function
+
+    <!-- <script>
+        function outer(){
+            console.log("Hi am Outer")
+            function inner(){
+                console.log("Hi am inner")
+            }
+            inner()
+        }
+        
+        outer()
+        
+    </script> -->
+
+    <!-- <script>
+        function outer(){
+            console.log("Hi am Outer")
+            function inner(){
+                console.log("Hi am inner")
+            }
+            return inner
+        }
+        
+        let b = outer()
+        b()
+    </script> -->
+
+     // closure() function
+    <!-- <script>
+        function outer(){
+            let a=10
+            function inner(){
+                console.log(a)
+            }
+            return inner
+        }
+        
+        let b = outer()
+        b()
+    </script> -->
+
+    //counter function
+    <!-- <script>
+        function counter(){
+            let count=0;
+            function increament(){
+                count++
+                return count
+            }
+            return increament
+        }
+        let res=counter()
+        console.log(res())
+        console.log(res())
+        for(let i=0;i<5;i++){
+            console.log(res())
+        }
+
+    </script> -->
+
+    //IIFE function
+    <!-- <script>
+        (function ())
+    </script> -->
+    <!-- <script>
+        ((a)=>console.log(a*a))(10),
+        ((a)=>console.log(a*a))(20)
+
+    </script> -->
+
+    //Curried function
+    <!-- <script>
+        let add=a=>b=>c=>a+b+c
+        console.log(add(10)(20)(30))
+    </script> -->
+
+    //Curried function with Arrow function
+    <!-- <script>
+        let add=a=>b=>c=>a+b+c
+        console.log(add(10)(20)(30))
+    </script> -->
+
+
+    // reduce() function
+    <!-- <script>
+        let nums=[10,20,30,40,50]
+        let r=nums.reduce((a,b)=>a*b)
+        console.log(r)
+        console.log(10*20*30*40*50)
+    </script> -->
+
+
+   
+
+</body>
+</html>

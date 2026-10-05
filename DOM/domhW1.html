@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p class="odd">this is the para 1</p>
+    <p class="even">this is the para 2</p>
+    <p class="odd">this is the para 3</p>
+    <p class="even">this is the para 4</p>
+    <p class="odd">this is the para 5</p>
+    <p class="even">this is the para 6</p>
+    <p class="odd">this is the para 7</p>
+    <p class="even">this is the para 8</p>
+    <p class="odd">this is the para 9</p>
+    <p class="even">this is the para 10</p>
+
+    <button onclick="changeAg()">Click me bro</button>
+    <script>
+        let evend = document.getElementsByTagName("p")
+       
+        // function randomcolor(){
+
+        // let r = Math.floor(Math.random()*255)
+        // console.log(r);
+        
+        // let g = Math.floor(Math.random()*255)
+        // console.log(g);
+
+        // let b = Math.floor(Math.random()*255)
+        // console.log(b);
+
+        // return `rgb(${r} ${g} ${b})`
+        // }
+
+        function changeAg(){
+        
+        for(let i =0;;i++){
+            if(i%2==0){
+                evend[i].style.backgroundColor="red"
+                evend[i].style.color="blackpink"
+            }else{
+                evend[i].style.backgroundColor="yellow"
+                evend[i].style.color="blue"
+            }
+        
+        }
+    }
+       
+    </script>
+</body>
+</html>

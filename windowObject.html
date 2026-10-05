@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /*console.log(window.location.href)
+        console.log(window.screen)
+        console.log(window.history)*/
+
+       /* setTimeout(()=>{
+            console.log("after 2 sec")
+        },2000)*/
+
+        /* let set = setInterval(() => {
+            console.log("print every two sec")
+        }, 2000)
+
+        setTimeout(() => {
+            clearInterval(set)
+        }, 20000) */
+
+        /*console.log("start")
+        setTimeout(()=>{
+            console.log("Processing")
+        },2000)
+        console.log("end")*/
+
+        /*let otp=1000+Math.trunc(Math.random()*9000)
+        alert("your otp is:"+otp)*/
+
+        /*alert("hi how r u")
+        let a=prompt("agree")
+        console.log(a)*/
+
+        /*function random(){
+            let r=Math.floor(Math.random()*255)
+            let g=Math.floor(Math.random()*255)
+            let b=Math.floor(Math.random()*255)
+            
+            return `rgb(${r}, ${g}, ${b})`
+        }
+            console.log(random())  
+            document.body.style.backgroundColor = random() */
+
+            
+            let color="0123456789ABCDEF"
+            let arr=color.split("")
+            let val="";
+            for(let i=0;i<6;i++){
+                let index=Math.floor(Math.random()*arr.length)
+                val += arr[index]
+            }
+            console.log(val)
+
+            let a="34555666";
+            console.log(a)
+            console.log(typeof((10).toString()))
+
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let olddiv = document.createElement("div")
+        olddiv.innerHTML="i am old Div"
+        console.log(olddiv)
+        document.body.append(olddiv)
+       
+
+
+        let newdiv = document.createElement("div")
+        newdiv.innerHTML="Hello i am new div element"
+        console.log(newdiv)
+
+        newdiv.setAttribute("id","demo")
+
+        // newdiv.style.setProperty("color","red")
+        // newdiv.style.setProperty("background-Color","black")
+        // newdiv.style.setProperty("font-Size","40px")
+
+        // instead of creating multiple setProperty we can apply the css property in single line by using style.cssText=" "
+        newdiv.style.cssText="color:red; background-Color:black;font-Size:45px;"
+        
+        document.body.append(newdiv)
+
+        // olddiv.replaceWith(newdiv)
+
+        // document.body.replaceChild(newNode,oldNode) syntax
+        // document.body.replaceChild(newdiv,olddiv)
+
+        // document.body.removeChild(olddiv)
+
+        console.log(newdiv.style.getPropertyValue("color"));
+        console.log(newdiv.style.getPropertyValue("background-color"));
+
+
+        let div =document.createElement("div")
+        div.innerHTML="hi div"
+        // console.log(div)
+        document.body.append(div)
+
+        let section = document.createElement("section")
+        section.innerHTML="hello section"
+        div.append(section)
+        // console.log(div)
+
+        let aside = document.createElement("aside")
+        section.append(aside)
+        // console.log(div)
+
+        let h1 = document.createElement("h1")
+        h1.innerHTML="hi"
+        aside.append(h1)
+        // console.log(div)
+
+        let aside1 = document.createElement("aside")
+        section.append(aside1)
+        // console.log(div)
+
+        let h2 = document.createElement("h2")
+        h2.innerHTML="hello"
+        aside1.append(h2)
+
+        let p = document.createElement("p")
+        p.innerHTML="hello para"
+        aside1.append(p)
+        // console.log(div)
+
+        let article = document.createElement("article")
+        article.innerHTML="hello article"
+        div.append(article)
+        // console.log(div);
+        
+
+        let div1=document.createElement("div")
+        article.append(div1)
+        // console.log(div);
+        
+        let article1=document.createElement("article")
+        div1.append(article1)
+        // console.log(div);
+
+        let div2=document.createElement("div")
+        article1.append(div2)
+        // console.log(div);
+
+        let h6=document.createElement("h6")
+        h6.innerHTML="bye....."
+        div2.append(h6)
+        console.log(div);
+
+
+        
+       
+
+
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>

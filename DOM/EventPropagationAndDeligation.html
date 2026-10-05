@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            height: 300px;
+            width: 300px;
+            background-color: Red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        aside{
+            height: 200px;
+            width: 200px;
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <section id="outermost">
+        <aside class="middletag">
+            <div>
+
+            </div>
+        </aside>
+    </section>
+    <script>
+
+        //event Propogation
+        let section =document.querySelector("section")
+        section.addEventListener("click",(e)=>{
+            // e.stopPropagation()
+            console.log("Hi am section red")
+            
+        },true)
+
+        let aside = document.querySelector("aside")
+        aside.addEventListener("click",(e)=>{
+            // e.stopPropagation()
+            console.log("hello aside yellow");
+            
+        },true)
+
+        let div=document.querySelector("div")
+        div.addEventListener("click",(e)=>{
+            // e.stopPropagation()
+            console.log("hello div green");
+            
+        },true)
+
+
+        // event delegation
+        // let section=document.querySelector("section")
+        // let aside=document.querySelector("aside")
+        // let div=document.querySelector("div")
+
+        // section.addEventListener("click",(e)=>{
+        //     if(e.target.id === "outermost"){
+        //         console.log("hii section red");
+                
+        //     }
+        //     else if(e.target.classList.contains("middletag")){
+        //         console.log("hello aside yellow");
+                
+        //     }
+        //     else if(e.target.tagName === "DIV"){
+        //         console.log("Hello div green")
+        //     }
+
+        // })
+    </script>
+</body>
+</html>

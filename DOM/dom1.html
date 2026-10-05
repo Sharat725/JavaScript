@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+
+    <i class="fa-regular fa-moon" onclick="changeTheme()"></i>
+    <i class="fa-solid fa-sun" onclick="light()"></i>
+
+    <h1 id="h1tag">Welcome to Dom1</h1>
+    <h1 class="cls">Welcome to Dom2</h1>
+    <h1 class="cls">Welcome to Dom3</h1>
+    <h1 id="h1tag">Welcome to Dom4</h1>
+    <h1 class="cls">Welcome to Dom5</h1>
+
+    <!-- <button onclick="alert('Hello welcome to dom')">click me</button> -->
+     <button onclick="changeText()">click me</button>
+     <button onclick="prevText()">prev text</button>
+      <button onclick="specificText()">Specific text</button>
+      <button onclick="alternate()">Alternate text</button>
+
+    <script>
+        //getElemetById(" ")
+        function  changeText(){
+            let h1=document.getElementById("h1tag")
+            console.log(h1)
+            h1.innerText="hello javaScript..!"
+            h1.style.backgroundColor="black"
+            h1.style.color="pink"
+        }
+
+        function prevText(){
+            let h1=document.getElementById("h1tag")
+            console.log(h1)
+            h1.innerText="Welcome to Dom1"
+            h1.style.backgroundColor="black"
+            h1.style.color="pink"
+
+        }
+
+
+
+        function specificText(){
+        // document.getElementByClassName()
+        let h1tags=document.getElementsByClassName("cls")
+        console.log(h1tags)
+        console.log(Array.isArray(h1tags))
+
+      /*  h1tags[0].style.backgroundColor="black"
+        h1tags[0].style.color="pink"
+
+        h1tags[1].style.backgroundColor="black"
+        h1tags[1].style.color="pink"
+
+        h1tags[2].style.backgroundColor="black"
+        h1tags[2].style.color="pink" */
+
+        for(let i=0;i<h1tags.length;i++){
+            h1tags[i].style.backgroundColor="black"
+            h1tags[i].style.color="pink"
+
+        }
+    }
+        function changeTheme(){
+            document.body.style.backgroundColor="black"
+            document.body.style.color="white"
+
+        }
+
+        function light(){
+            document.body.style.backgroundColor="white"
+            document.body.style.color="black"
+        }
+
+        setInterval(()=>{
+            changeTheme()
+        },1000)
+
+        let set=setInterval(()=>{
+            light()
+        },2000)
+
+        setTimeout(() => {
+            clearInterval(set)
+        }, 20000)
+
+        function alternate(){
+            let h1tags=document.getElementsByTagName("h1")
+            for(let i=0;i<h1tags.length;i++){
+                if(i%2==0){
+                    h1tags[i].style.backgroundColor="black"
+                    h1tags[i].style.color="pink"
+                }else{
+                    h1tags[i].style.backgroundColor="yellow"
+                    h1tags[i].style.color="red"
+
+                }
+
+        }
+
+        }
+
+    </script>
+</body>
+</html>

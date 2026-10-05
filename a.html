@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        var a=10;
+        let b=20;
+        const c=30;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+
+        function greet(){
+            var d=100;
+            let e=200;
+            console.log(d,e);
+        }
+        greet();
+    </script> -->
+    <!-- <script>
+        console.log(10+10)
+        console.log(10+"10")
+        console.log(10-"5")
+        console.log(10-5)
+
+        let a=10;
+        let b=String(a)
+        console.log(a,typeof b)
+        console.log(b,typeof b)
+
+        let c=Boolean(a)
+        console.log(c,typeof c)
+
+        let d=BigInt(a)
+        console.log(d,typeof d)
+
+        
+
+
+
+
+    </script> -->
+
+    <!-- <script>
+        function greet(){
+            console.log("Welcome to function")
+            return "bye bye"
+        }
+        console.log(greet())
+
+        function add(a,b){
+            return a+b
+        }
+        console.log(add(10,20))
+
+        function sub(a,b){
+            return a-b
+        }
+        console.log(sub(40,20))
+
+        function mul(a,b){
+            return a*b
+        }
+        console.log(mul(10,20))
+
+        function div(a,b){
+            return a/b
+        }
+        console.log(div(100,20))
+
+
+        function mod(a,b){
+            return a%b
+        }
+        console.log(add(102,20))
+    </script> -->
+    <!-- <script>
+        function add(a,b){
+            return a+b
+        }
+        console.log(add(5,6))
+
+        let mul = function(c,d){
+            return c*d
+        }
+        console.log(mul(2,6)) 
+
+        let div = (e,f) =>{
+            return e/f;
+        }
+        console.log(div(6,2))
+    </script> -->
+    <!-- <script>
+        function Welcome(a,b){
+            console.log(b(a))
+        }
+        Welcome(5,greet)
+
+        function greet(c){
+            console.log(c)
+        }
+
+
+    </script> -->
+    <!-- <script>
+        function outer(){
+            let a=10
+            function inner(){
+                console.log("Inner function")
+
+                function innerMost(){
+                    console.log(a)
+
+                }
+                innerMost()
+            }
+            inner()
+        }
+        outer() 
+    </script> -->
+// Lexical scope= it is accessibility of inner function to access a variables from outer scope or global scope based on their location in the source code
+  
+    <!-- <script>
+        function counter(){
+            let count = 0
+            function increament(){
+                count++
+                return count
+            }
+            return increament
+        }
+        let res=counter()
+        console.log(res())
+        console.log(res())
+        console.log(res())
+        console.log(res())
+        console.log(res())
+        console.log(res())
+
+    </script> -->
+    <!-- <script>
+        function firstfun(a){
+            return function secondfun(b){
+                return function thirdfun(c){
+                    return a+b+c
+                }
+            }
+        }
+        console.log(firstfun(2)(3)(4))
+    </script> -->
+
+    <!-- <script>
+        (function(){
+            console.log("Hi")
+        })();
+
+        (function demo(){
+            console.log("hello")
+        })()
+    </script> -->
+
+    <!-- <script>
+        function triangle(b,h){
+            console.log(0.5*b*h);
+        }
+        triangle(5,10)
+
+        function rectangle(w,h){
+            console.log(w*h);
+        }
+        rectangle(10,20)
+
+        function trapezoid(a,b,h){
+            console.log(0.5*(a+b)*h);
+        }
+        trapezoid(10,20,30)
+        
+         function ellipse(a,b){
+            console.log(3.142*a*b);
+        }
+        ellipse(10,20)
+
+         function square(a){
+            console.log(a*a);
+        }
+        square(10)
+
+         function parallelogram(b,h){
+            console.log(b*h);
+        }
+        parallelogram(10,20)
+
+         function circle(r){
+            console.log(3.142*r*r);
+        }
+        circle(10)
+
+         function sector(r,t){
+            console.log(0.5*r*r*t);
+        }
+        sector(10,20)
+    </script> -->
+    <script>
+        let num="1234";
+        let str1= "javascript";
+        let str2="welcome";
+        let str3="      hi     "
+
+        console.log(num.padStart(12,"*"));
+        console.log(num.padEnd(12,"*"));
+        console.log(str1.replaceAll("j","b"))
+        console.log(str1.split(""))
+        console.log(str1.split("").reverse())
+        console.log(str1.split("").reverse().join(""))
+        console.log(str1.startsWith("java"))
+        console.log(str1.endsWith("script"))
+        console.log(str3.trimStart())
+        console.log(str3.trimStart().length)
+        console.log(str3.trimEnd())
+        console.log(str3.trimEnd().length)
+        console.log(str3.trim())
+        console.log(str3.trim().length)
+        console.log(str2.charAt(0))
+        console.log(str2.concat(str1))
+        console.log(str1.indexOf("a"))
+        console.log(str1.lastIndexOf("a"))
+        console.log(str1.repeat(3))
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

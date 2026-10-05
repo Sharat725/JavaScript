@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Page Title</title>
+    
+</head>
+
+<style>
+    #cir{
+        /* border: 15px solid; */
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        border-top:10px solid black;
+        /* border-top: rgb(15, 14, 14);
+        border-left: black;
+        border-right: rgb(4, 4, 4); */
+        animation-name: rotation;
+        animation-duration: 1000ms;
+        animation-iteration-count: infinite;
+
+    }
+
+     @keyframes rotation{
+            0%{
+                transform: rotate(90deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+            
+        }
+     
+    /* #f{
+        border: 1px solid;
+        height: 900px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    } */
+
+    #cart{
+        border: 1px solid rgb(147, 143, 143);
+        border-radius: 15%;
+        height: 30px;
+        width: 100px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+   
+</style>
+<body>
+    <!-- <div id="f"> -->
+    <div id="cir"> </div>
+    <!-- </div> -->
+    
+   <center> <button onclick="rotate()">click</button></center>
+   <div id="cart">
+   <button  onclick="add()"><b>+</b></button>
+   <span id="span"></span>
+   <button onclick="remove()"><b>-</b></button>
+   </div> 
+   
+   </div>
+
+    <script>
+        function rotate(){
+
+        }
+
+
+
+        // let c=document.createElement("button")
+        // c.innerText="+"
+        // document.body.append(c)
+
+        let count=0;
+        let s=document.getElementById("span")
+        s.innerHTML=count
+        let s1=document.getElementById("cart2")
+        s1.append(s)
+
+
+
+        // let c2=document.createElement("button")
+        // c2.innerText="-"
+        // document.body.append(c2)
+
+        // button.setAttribute(onclick,add())
+        // console.log(c);
+        
+        function add(){
+            count++
+             s.innerHTML=count
+            
+        }
+        function remove(){
+            if(count>0){
+            count--
+            s.innerHTML=count
+            }
+        }
+
+    </script>
+</body>
+</html>
