@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+        integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        <style>
+            #display{
+                border: 2px solid red;
+                height: 90vh;
+                width: 25%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                translate:(50px);
+                position: absolute;
+                left: ;
+            }
+            #box1{
+                display: flex;
+            }
+        </style>
+</head>
+<body>
+    <div>
+        <i id="menu" class="fa-solid fa-bars"></i>
+    </div>
+    <div id="box1">
+        <div id="display">
+        <h1>TRENDING</h1>
+        <p>Bestsellers</p>
+        <p>New Realeases</p>
+        <h1>Digital Content and Devices</h1>
+        <p>Echo & Alexa</p>
+        <p>Fire TV</p>
+        <p>Kindle E-Readers & eBooks</p>
+        <p>Audible Audiobooks</p>
+        <p>Amazon Prime Video</p>
+        <p>Amazon Music</p>
+    </div>
+    <i class="fa-solid fa-xmark"></i>
+    </div>
+    
+
+
+    <script>
+        let menu=document.getElementById("menu")
+
+        menu=document.addEventListener("click",()=>{
+            document.body.style.transform(0,25)
+        })
+
+    </script>
+</body>
+</html>

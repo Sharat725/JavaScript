@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #box1{
+            border: 2px solid red;
+            height: 100vh;
+            width: 100%;
+            background-color: chocolate;
+            display: flex;
+            
+            justify-content: center;
+            align-items: center;
+        }
+
+        #box2{
+            border: 2px solid red;
+            height: 50%;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #box3{
+            border: 2px solid red;
+            height: 100%;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            
+        }
+        #box4{
+            border: 2px solid red;
+            height: 100%;
+            width: 50%;
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        span{
+            
+            color: red;
+            
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box1">
+        
+        <div id="box2">
+            <div id="box3">
+                <img src="./photo/p2.jpg" alt="">
+            </div>
+            <div id="box4">
+        <form id="myform">
+       <label for="">Enter UserName</label><br> <input type="text" id="username" placeholder="Enter name"><br>
+        <span id="p1"></span><br>
+        <label for="">Enter Email</label><br>
+        <input type="email" id="email" placeholder="email"><br>
+        <span id="p2"></span><br>
+        <label for="">Enter Password</label><br>
+        <input type="text" id="password" placeholder="Password" pattern="[A-Z]{1}[a-z]{3}[@#$]{1}[0-9]{3}" title="one Uppercase and 3lowercase 1 specialcharacter 3 digit"><br>
+        <span id="p3"></span><br>
+        <label for="">Enter Conform Password</label><br>
+        <input type="text" id="Cpassword" placeholder="Conform Password"><br>
+        <span id="p4"></span><br>
+        <center><button type="submit" id="submit">Submit</button></center>
+    </form>
+    </div>
+
+
+        </div>
+
+    </div>
+
+    
+    <script>
+        // localStorage.clear()
+
+       document.getElementById("myform").addEventListener("submit", (e) => {
+
+            e.preventDefault();
+
+            let username = document.getElementById("username").value
+
+            let p1=document.getElementById("p1")
+
+            let email = document.getElementById("email").value
+
+            let p2=document.getElementById("p2")
+
+            let password = document.getElementById("password").value
+
+            let p3=document.getElementById("p3")
+
+            let Cpassword = document.getElementById("Cpassword").value
+
+            let p4=document.getElementById("p4")
+
+
+            let arr = JSON.parse(localStorage.getItem("userdata")) || [];
+
+            
+
+            
+
+            let exist =  arr.some((ele)=>{
+                return ele.username === username
+                })
+
+                
+
+                if(username.length > 15){
+                    p1.innerText="name should be lessthan 15 character"
+                    return
+                }
+
+
+                if(username.length === 0){
+                    p1.innerText="Enter username"
+                    return
+                }
+
+                if(email.length===0){
+                    p2.innerHTML="enter email"
+                    return
+                }
+      
+                // let pattern="/^(?=.*[A-Z])(?=.*[a-z])(?=.*[^[a-zA-Z0-9](?=.*[0-9]))$"
+                
+                if(password.length===0){
+                    p3.innerHTML="enter password"
+                    return
+                }
+                
+                // if(password.charAt(0) !== password.charAt(0).toUpperCase()){
+                //     p3.innerText="enter one capital letter"
+                //     return
+                // }
+
+    
+
+
+
+                
+                
+
+                if(Cpassword.length===0){
+                    p4.innerHTML="enter Conform password"
+
+                    return
+                }
+
+                if(password !== Cpassword){
+                    p4.innerHTML="password is notmatching"
+                }
+
+                if(exist){
+                    alert("User exist")
+                    return;
+                }
+
+            let obj = {
+                username, password
+            };
+            arr.push(obj)
+
+            localStorage.setItem("userdata", JSON.stringify(arr));
+
+
+
+
+        });
+
+        let password = document.getElementById("password").value
+
+        if("@#$!&".includes(password)){
+            console.log("it includes");
+            
+        }else{
+             console.log("it not includes");
+            
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form id="myform">
+        <input type="text" id="username"><br><br>
+        <input type="text" id="password"><br><br>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+
+    <div id="result"></div>
+    <script>
+        document.getElementById("myform").addEventListener("submit", (e) => {
+
+            e.preventDefault();
+
+            let arr = JSON.parse(localStorage.getItem("userdata")) || [];
+
+            let username = document.getElementById("username").value;
+
+            let password = document.getElementById("password").value;
+
+            let obj = {
+                username, password
+            };
+
+            
+            arr.push(obj)
+
+            localStorage.setItem("userdata", JSON.stringify(arr));
+
+
+
+
+        });
+    </script>
+</body>
+</html>
